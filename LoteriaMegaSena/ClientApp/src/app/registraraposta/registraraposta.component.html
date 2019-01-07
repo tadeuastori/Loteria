@@ -1,0 +1,42 @@
+<div #pnlJogo class="pnlJogo">
+
+  <h1>{{ descricao }}</h1>
+  <p>Escolha {{ quantidadeNumeros }} números para efetuar uma aposta.</p>
+
+  <div *ngFor="let in of counter();" class="dvopt noselect dvoptoff" (click)="marcarNumero($event)">
+    <div class="numopt numoptoff">{{in}}</div>
+  </div>
+  <br />
+  <input (click)="realizarJogo()" type="button" value="Salvar Jogo" class="btnact" />
+  <input (click)="numeroAleatorios()" type="button" value="Número Aleatório" class="btnact" />
+  <input (click)="surpresinha()" type="button" value="Surpresinha" class="btnact" />
+  <input (click)="limpar()" type="button" value="Limpar" class="btnact" />
+
+</div>
+<div #pnlErro>
+  <br />
+  <label>Erro: {{ erro }}</label>
+</div>
+<div #pnlApostaCadastrada>
+  <hr>
+  <h4>Apostas realizadas</h4>
+  <br />
+  <table class='table' *ngIf="apostas">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Números</th>
+        <th>Data</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aposta of apostas">
+        <td>{{ aposta.id }}</td>
+        <td>{{ aposta.numerosExib }}</td>
+        <td>{{ aposta.data }}</td>
+        <td>{{ aposta.descricaoTipoAposta }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

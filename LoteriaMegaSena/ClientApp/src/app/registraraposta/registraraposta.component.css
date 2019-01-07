@@ -1,0 +1,53 @@
+.pnlJogo {
+  max-width: 425px;
+}
+
+.dvopt {
+  height: 35px;
+  width: 35px;
+  border-radius: 10%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  
+}
+
+.dvopton {
+  background-color: #388e3c;
+  border: solid 1px #388e3c;
+}
+
+.dvoptoff {
+  border: solid 1px black;
+  background-color: white;
+}
+
+.numopt {
+  font-weight: normal;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.numopton {
+  color: white;
+}
+
+.numoptoff {
+  color: black;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btnact {
+  margin-top: 15px;
+  margin-right: 5px;
+}

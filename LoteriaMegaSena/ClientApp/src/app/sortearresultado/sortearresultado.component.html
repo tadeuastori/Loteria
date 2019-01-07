@@ -1,0 +1,65 @@
+<h1>Sorteio</h1>
+
+<h3>Dezenas Sorteadas:</h3>
+<h4>
+  {{ numerosSorteados }}
+</h4>
+<br />
+
+<input (click)="sortear()" type="button" value="Sortear Números" />
+
+<br /><hr/>
+<h3>Ganhadores</h3>
+<h4>Mega Sena</h4>
+<table class='table' *ngIf="ganhadores">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Números</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ganhador of ganhadores">
+      <td>{{ ganhador.id }}</td>
+      <td>{{ ganhador.numerosExib }}</td>
+      <td>{{ ganhador.data }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Quina</h4>
+<table class='table' *ngIf="ganhadoresQuina">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Números</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ganhador of ganhadoresQuina">
+      <td>{{ ganhador.id }}</td>
+      <td>{{ ganhador.numerosExib }}</td>
+      <td>{{ ganhador.data }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Quadra</h4>
+<table class='table' *ngIf="ganhadoresQuadra">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Números</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ganhador of ganhadoresQuadra">
+      <td>{{ ganhador.id }}</td>
+      <td>{{ ganhador.numerosExib }}</td>
+      <td>{{ ganhador.data }}</td>
+    </tr>
+  </tbody>
+</table>

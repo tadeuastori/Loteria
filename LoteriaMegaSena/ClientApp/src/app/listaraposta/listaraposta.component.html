@@ -1,0 +1,20 @@
+<h1>Apostas</h1>
+
+<table class='table' *ngIf="apostas">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Números</th>
+      <th>Data</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aposta of apostas">
+      <td>{{ aposta.id }}</td>
+      <td>{{ aposta.numerosExib }}</td>
+      <td>{{ aposta.data }}</td>
+      <td>{{ aposta.descricaoTipoAposta }}</td>
+    </tr>
+  </tbody>
+</table>
